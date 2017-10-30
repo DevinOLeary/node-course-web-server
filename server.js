@@ -47,6 +47,12 @@ app.get('/', (req, res) => {
     welcomeMessage: 'Chickity Check it'
   });
 });
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    pageContent: 'My projects are awesome'
+  })
+})
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
